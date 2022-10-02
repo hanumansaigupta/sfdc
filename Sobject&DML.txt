@@ -1,0 +1,130 @@
+list <account> lstname = [select id from account];
+system.debug('list of ids in account' +lstname);
+
+
+Account acc = [select id, name, accountnumber from Account where name='kadapa'];
+system.debug('displaying ids'+acc.id);
+
+
+Sobject acc1 = [select id, name, accountnumber from Account where name='kurnool'];
+system.debug('displaying ids'+acc1.id);
+
+
+
+list<Account>acc = [select name, accountnumber, Industry from Account];
+system.debug('the size of list are '+acc.size());
+for(Account acc1:acc){
+    system.debug(' name '+acc1.name);
+    system.debug(' name '+acc1.accountnumber);
+    system.debug(' name '+acc1.Industry);
+}
+
+
+
+list<Account>acc = [select name, accountnumber, Industry from Account];
+system.debug('the size of list are '+acc.size());
+for(Account acc1:acc){
+    system.debug(' name '+acc1.name);
+   }
+for(Account acc2:acc){
+     system.debug(' name '+acc2.accountnumber);
+}
+for(account acc3:acc){
+     system.debug(' name '+acc3.Industry);
+}
+
+
+
+list<account>acclist = new list<account>();
+acclist = [select id, name, accountnumber from Account limit 3];
+for(Account acc1:acclist){
+    system.debug(' name '+acc1.name);
+   }
+
+list<Account>lstname= [select id, name, accountnumber from Account limit 3];
+for(Account acc1:lstname){
+    system.debug(' name '+acc1.name);
+   }
+
+// Above mentioned two codes gives same output; however writing the code is different;
+
+list<Account>lstname= [select id, name, accountnumber from Account limit 3];
+
+for(Account acc1:lstname){
+  
+  system.debug(' name '+acc1.id);
+   }
+
+
+
+
+list<Account>lstname1= [select id, name, accountnumber from Account limit 3];
+
+set<Id>accIds= new set<Id>();
+
+for(Account acc1:lstname1){
+  
+  accIds.add(acc1.Id);
+   }
+
+system.debug('Ids in accIds  '+accIds);
+
+// understand the concept of set in above code; (we always collect the Ids in "set" only);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//DML Manupulations//
+
+Insert : 
+
+ Account acc = new account(name= 'kanpur', phone= '6698756',accountnumber= '00332659874');
+        insert acc;
+
+UPDATE:
+
+Account acc = [select id, name,accountnumber, phone from Account where name='kadapa'];
+system.debug('displaying kadapa '+acc);
+acc.name= 'china';
+update acc;
+system.debug('updated name =>'+ acc);
+
+DELETE: (deleted records will goes to RecycleBin and they are stored here for 15 days & to restore that recored use 'UNDELETE' statement)
+
+Account acc = [select id, name,accountnumber, phone from Account where name='delhi'];
+system.debug('displaying delhi '+acc);
+delete acc;
+
+
+UNDELETE:(ALL ROWS is key word added in SOQL line)
+Account acc = [select id, name,accountnumber, phone from Account where name='delhi' ALL ROWS];
+system.debug('displaying delhi '+acc);
+undelete acc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

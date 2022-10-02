@@ -1,0 +1,15 @@
+CRM stands for Customer Relationship Management. This technology allows you to manage relationships with your customers and prospects and track data related to all of your interactions.
+
+
+Salesforce organizes your data into objects and records. You can think of objects like a tab on a spreadsheet, and a record like a single row of data.
+
+Record	An item you are tracking in your database; if your data is like a spreadsheet, then a record is a row on the spreadsheet
+Field	A place where you store a value, like a name or address; using our spreadsheet example, a field would be a column on the spreadsheet
+Object	A table in the database; in that spreadsheet example, an object is a tab on the spreadsheet
+Org	Short for “organization,” the place where all your data, configuration, and customization lives. You and your users log in to access it. You might also hear this called “your instance of Salesforce”
+App	A set of fields, objects, permissions, and functionality to support a business process
+Accounts are the companies you’re doing business with;
+Contacts are the people who work at an Account. Leads;
+ opportunities are leads that are qualified to buy.;
+When you convert the Lead, you create an Account and Contact along with the Opportunity.
+

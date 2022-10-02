@@ -1,0 +1,52 @@
+public class Apex_practice {
+    
+      public static void Hauma()
+        {
+ List<String> colors = new List<String>();
+ colors.add('red');
+ colors.add('green');
+ colors.add('blue');
+system.debug('colors...'+colors);   
+        }
+}
+
+---------------------------------------------------------
+public class List_Practice {
+       public static void Hauma()
+        {
+ List<String> colors = new List<String>{'red','green','blue'};
+system.debug('colors...'+colors);   
+        }
+}
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+public class List_Sobjects {
+public static void Mylist(){
+list<Account>qwert = new list<Account>();
+Account a1 = new Account(Name = 'shilpa');
+Account a2 = new Account(Name ='rekha');
+Account a3 = new Account(Name ='Aamaa');
+Account a4 = new Account(Name ='Raghu');
+Account a5 = new Account(Name ='shilpa');
+Account a6 = new Account(Name ='sai');
+qwert.add(a1);
+qwert.add(a2);
+qwert.add(a3);
+qwert.add(a4);
+qwert.add(a5);
+qwert.add(a6);
+system.debug('qwert...'+qwert);      
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

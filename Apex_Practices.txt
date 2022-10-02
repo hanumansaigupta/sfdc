@@ -1,0 +1,124 @@
+Day 19/09/2022 : 
+string x = 'I am Hanuman';
+string y = 'I AM HANUMAN';
+string z = 'i am good boy';
+system.debug(x==y);  // OUTPUT = TRUE
+system.debug(Z==Y); // FALSE
+system.debug(x!=Z);  // TRUE
+system.debug(x!=y);  // FALSE
+system.debug('x!=Y');  //Just it print as x!=y
+system.debug(x.endwith('n'));  // TRUE
+system.debug(x.length()); // output: 12
+system.debug(x.substring(3,8)); // output: m Hanu   (INDEX ALWAYS STARTS WITH ZERO)
+ 
+=============================================================================================
+integer num1 = 12;
+if(num1>=10){
+    system.debug('you got 10% discount');
+system.debug(' Enjoy your shopping');
+}
+else{
+    system.debug('you got zero percent discount');
+system.debug('buy more items');
+}
+system.debug('Thank u ');
+OUTPUT : you got 10% discount
+	Enjoy your shopping
+	Thank u
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+integer num1 = 12;
+if(num1>=14){
+    system.debug('you got 10% discount');
+system.debug(' Enjoy your shopping');
+}
+else{
+    system.debug('you got zero percent discount');
+system.debug('buy more items');
+}
+system.debug('Thank u ');
+OUTPUT : you got zero percent discount
+	buy more items
+	Thank u
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+TERNARY OPERATOR: alternate for IF ELSE; (? acts as ternary operator and first colon acts as true statement and second colon acts as false statement)
+Boolean isit = True;
+string x = 'you are ' + ((isit? 'Hanuman': 'Sai'));
+ssytem.debug(x);
+
+Output: you are Hanuman
+
+2) Boolean isit = True;
+string x = 'you are ' + ((8<3? 'Hanuman': 'Sai'));
+ssytem.debug(x);
+
+Output: you are Sai
+
+
+
+
+
+
+======================================================================
+Constructor Importance & Private access modifier Importance: constractor is like a special method to intialize object; constructor name is same as classname & it doesnot has returntype;constructor &Method both has paranthasis () & inside we pass the parameters as input along with its datatype;
+
+public class Deepika1 {
+
+    private string name;  // instance variable with private modifier
+    private integer age;  //instance variable with private modifier
+    private string Designation;//instance variable with private modifier
+
+ public Deepika1() {      // constructor without parameters
+    name='Deepika';
+    age=26;
+    Designation= 'software engineer';  
+
+public Deepika1(string name, integer age, string desig);  // constructor with parameters
+this.name = name;
+this age= age;
+this.designation = desig;  
+}
+
+public string getName()  // instance method(Absence of static key word ) with string return type
+{   
+    return name;
+}
+public integer getage()	  // instance  method with integer return type
+{  
+    return age;	
+}
+public string getDesignation()   // instance  method with string return type
+{    
+    return Designation;
+}
+}
+
+Calling like this :
+deepika1 d1 = new deepika1();    // here d1,d2,d3 are oject( acts like remote for TV )
+deepika1 d2= new deepika1('Amit', 28 , 'Doctor');  // passing arguments
+deepika1 d3 = new deepika1();
+
+system.debug('Name of the empleyee  '+d1.getName());  deepika // here we are calling with obj.methodName  (Because instance method)
+system.debug('age of the employee  '+d2.getage()); //28
+system.debug('Designation of the employee  '+d3.getdesignation()); //software engineer
+
+system.debug('Name of the empleyee  '+d1.getName());  // deepika// here we are calling with obj.methodName  (Because instance method)
+system.debug('age of the employee  '+da.getage()); //26
+system.debug('Designation of the employee  '+d1.getdesignation()); // software engineer
+
+system.debug('Name of the empleyee  '+d2.getName());  // Amit // here we are calling with obj.methodName  (Because instance method) // here constructor with parameters was called
+system.debug('age of the employee  '+d2.getage()); //28
+system.debug('Designation of the employee  '+d2.getdesignation());   // Doctor
+
+system.debug('Name of the empleyee  '+d3.getName()); // Deepika // here we are calling with obj.methodName  (Because instance method)
+system.debug('age of the employee  '+d3.getage());  //26
+system.debug('Designation of the employee  '+d3.getdesignation()); // software engineer
+
+
+
+
+
+
+
+
+

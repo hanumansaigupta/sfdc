@@ -1,0 +1,88 @@
+public class Set_pratice {
+public static void Set_pratice(){
+set<Account>qwert = new set<Account>();
+Account a1 = new Account(Name = 'shilpa');
+Account a2 = new Account(Name ='rekha');
+Account a3 = new Account(Name ='Aamaa');
+Account a4 = new Account(Name ='Raghu');
+Account a5 = new Account(Name ='shilpa');
+Account a6 = new Account(Name ='sai');
+qwert.add(a1);
+qwert.add(a2);
+qwert.add(a3);
+qwert.add(a4);
+qwert.add(a5);
+qwert.add(a6);
+system.debug(qwert.size());      
+  }
+}
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Question: Taking common values:
+public class SetCommonValues {
+
+    public void commonElements(Set<Integer> s1, Set<Integer> s2, Set<Integer> s3){
+        
+        Set<Integer> commonElements = new Set<Integer>();
+        
+        commonElements.addAll(s1);
+        commonElements.addAll(s2);
+        commonElements.addAll(s3);
+        
+        commonElements.retainAll(s1);
+        commonElements.retainAll(s2);
+        commonElements.retainAll(s3);
+        
+        System.debug('Common Elements : ' + commonElements);
+    }
+}
+
+Calling from Asysnouomous windows:
+
+SetCommonValues s = new SetCommonValues();
+Set<Integer> s1 = new Set<Integer>{15,19,20,22,29,65,75};
+Set<Integer> s2 = new Set<Integer>{19,22,24,26,45,65,70};
+Set<Integer> s3 = new Set<Integer>{2,4,9,18,19,22,65,75};
+    
+s.commonElements(s1,s2,s3);
+
+------------------------------------------------------------------------------------------------------------------
+public class SetCommonValues1{
+
+    public void commonElements1(Set<Integer> s1, Set<Integer> s2, Set<Integer> s3){
+        
+        Set<Integer> commonElements1 = new Set<Integer>();
+        
+        commonElements1.addAll(s1);
+        commonElements1.addAll(s2);
+        commonElements1.addAll(s3);
+        
+        
+        System.debug('Common Elements1 : ' + commonElements1);
+    }
+}
+Calling from Asysnouomous windows:
+
+SetCommonValues1 s = new SetCommonValues1();
+Set<Integer> s1 = new Set<Integer>{15,19,20,22,29,65,75};
+Set<Integer> s2 = new Set<Integer>{19,22,24,26,45,65,70};
+Set<Integer> s3 = new Set<Integer>{2,4,9,18,19,22,65,75};
+    
+s.commonElements1(s1,s2,s3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
